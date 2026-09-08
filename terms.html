@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
+  <title>Terms of Service — OrbitIQ</title>
+  <meta name="description" content="Official Terms of Service for OrbitIQ: Habit Streak & Focus Tracker Android App (com.sumdev.orbitiq.app). Rules, virtual items policy, and user agreement." />
+  <meta name="theme-color" content="#070B14" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <style>
+    :root {
+      --bg: #070B14;
+      --card-bg: rgba(15, 23, 42, 0.82);
+      --border: rgba(255, 255, 255, 0.08);
+      --text-main: #F1F5F9;
+      --text-sub: #94A3B8;
+      --cyan: #00E5FF;
+      --cyan-glow: rgba(0, 229, 255, 0.35);
+      --emerald: #00E676;
+      --amber: #F59E0B;
+      --rose: #F43F5E;
+      --radius: 16px;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; background: var(--bg); }
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      background-color: var(--bg);
+      color: var(--text-main);
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+      padding-bottom: 60px;
+    }
+
+    .glow-orb {
+      position: fixed;
+      width: 480px;
+      height: 480px;
+      border-radius: 50%;
+      filter: blur(140px);
+      opacity: 0.15;
+      pointer-events: none;
+      z-index: 0;
+    }
+    .orb-1 { top: -100px; left: -100px; background: var(--cyan); }
+    .orb-2 { bottom: -100px; right: -120px; background: var(--emerald); }
+
+    .container {
+      position: relative;
+      z-index: 1;
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    header {
+      padding: 24px 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid var(--border);
+      margin-bottom: 36px;
+    }
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+    }
+    .brand-icon {
+      width: 42px;
+      height: 42px;
+      border-radius: 12px;
+      background: linear-gradient(135deg, #00E5FF, #00E676);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #070B14;
+      font-weight: 900;
+      font-size: 1.25rem;
+      box-shadow: 0 0 20px var(--cyan-glow);
+    }
+    .brand-title {
+      font-family: 'Outfit', sans-serif;
+      font-size: 1.35rem;
+      font-weight: 800;
+      color: #fff;
+    }
+    .brand-tag {
+      font-size: 0.7rem;
+      color: var(--cyan);
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      font-weight: 700;
+      display: block;
+    }
+    nav { display: flex; gap: 10px; }
+    .nav-pill {
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: var(--text-sub);
+      text-decoration: none;
+      padding: 7px 14px;
+      border-radius: 999px;
+      border: 1px solid var(--border);
+      background: rgba(255, 255, 255, 0.03);
+      transition: all 0.2s ease;
+    }
+    .nav-pill:hover, .nav-pill.active {
+      color: #fff;
+      border-color: var(--cyan);
+      background: rgba(0, 229, 255, 0.1);
+    }
+    .nav-pill.danger {
+      color: #fda4af;
+      border-color: rgba(244, 63, 94, 0.3);
+      background: rgba(244, 63, 94, 0.08);
+    }
+
+    .hero {
+      text-align: center;
+      padding: 20px 0 32px;
+    }
+    .status-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 5px 14px;
+      border-radius: 999px;
+      background: rgba(0, 229, 255, 0.12);
+      border: 1px solid rgba(0, 229, 255, 0.3);
+      color: var(--cyan);
+      font-size: 0.78rem;
+      font-weight: 600;
+      margin-bottom: 16px;
+    }
+    .hero h1 {
+      font-family: 'Outfit', sans-serif;
+      font-size: clamp(2rem, 6vw, 2.6rem);
+      font-weight: 800;
+      margin-bottom: 12px;
+    }
+    .hero h1 span {
+      background: linear-gradient(135deg, #00E5FF, #00E676);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .hero p {
+      color: var(--text-sub);
+      font-size: 1.05rem;
+      max-width: 620px;
+      margin: 0 auto;
+    }
+    .effective-date {
+      display: inline-block;
+      margin-top: 14px;
+      font-size: 0.82rem;
+      color: var(--cyan);
+      background: rgba(0, 229, 255, 0.08);
+      padding: 4px 12px;
+      border-radius: 6px;
+      border: 1px solid rgba(0, 229, 255, 0.2);
+    }
+
+    .policy-content {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 36px 32px;
+      backdrop-filter: blur(12px);
+      margin-top: 24px;
+    }
+    .section { margin-bottom: 32px; }
+    .section:last-child { margin-bottom: 0; }
+    .section-title {
+      font-family: 'Outfit', sans-serif;
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 14px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    }
+    .section-title .num {
+      font-size: 0.8rem;
+      color: var(--cyan);
+      background: rgba(0, 229, 255, 0.12);
+      border: 1px solid rgba(0, 229, 255, 0.25);
+      padding: 2px 8px;
+      border-radius: 6px;
+      font-family: monospace;
+    }
+    p { margin-bottom: 12px; color: #cbd5e1; font-size: 0.95rem; }
+    ul { margin: 12px 0 16px 24px; color: #cbd5e1; font-size: 0.95rem; }
+    li { margin-bottom: 8px; }
+    strong { color: #fff; }
+
+    footer {
+      margin-top: 48px;
+      text-align: center;
+      padding-top: 24px;
+      border-top: 1px solid var(--border);
+      color: var(--text-sub);
+      font-size: 0.85rem;
+    }
+    footer a { color: var(--cyan); text-decoration: none; }
+    footer a:hover { text-decoration: underline; }
+
+    @media (max-width: 640px) {
+      header { flex-direction: column; gap: 16px; align-items: flex-start; }
+      nav { width: 100%; justify-content: flex-start; overflow-x: auto; }
+      .policy-content { padding: 24px 18px; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="glow-orb orb-1"></div>
+  <div class="glow-orb orb-2"></div>
+
+  <div class="container">
+    <header>
+      <a href="index.html" class="brand">
+        <div class="brand-icon">Ω</div>
+        <div>
+          <span class="brand-title">OrbitIQ</span>
+          <span class="brand-tag">SumDev Studio</span>
+        </div>
+      </a>
+      <nav>
+        <a href="index.html" class="nav-pill">Privacy Policy</a>
+        <a href="terms.html" class="nav-pill active">Terms of Service</a>
+        <a href="deletion.html" class="nav-pill danger">Delete Account</a>
+      </nav>
+    </header>
+
+    <div class="hero">
+      <div class="status-badge">Legal User Agreement</div>
+      <h1>Terms of <span>Service & Protocol</span></h1>
+      <p>Standard terms governing the use of OrbitIQ Habit Streak & Focus Tracker software, Pro upgrades, and digital streak shields.</p>
+      <div class="effective-date">Last Updated: September 2026 • Effective for Version 2.0+</div>
+    </div>
+
+    <main class="policy-content">
+      <section class="section">
+        <h2 class="section-title"><span class="num">01</span> Acceptance of Terms</h2>
+        <p>By downloading, installing, or accessing <strong>OrbitIQ: Habit Streak & Focus Tracker</strong>, you agree to be bound by these Terms of Service. If you do not agree, please do not use the application.</p>
+      </section>
+
+      <section class="section">
+        <h2 class="section-title"><span class="num">02</span> Permitted Use & Code of Conduct</h2>
+        <p>OrbitIQ provides personal productivity tools including habit streak monitoring, focus interval timers, reflection journals, and ambient soundscapes. You agree to:</p>
+        <ul>
+          <li>Use the application solely for lawful personal self-improvement purposes.</li>
+          <li>Not attempt to reverse engineer, decompile, or tamper with the application's binary code, cryptographic tokens, or backend Firestore security rules.</li>
+          <li>Not utilize automated scripts or emulated exploits to manipulate XP ranks, streak records, or leaderboard standing.</li>
+        </ul>
+      </section>
+
+      <section class="section">
+        <h2 class="section-title"><span class="num">03</span> OrbitIQ Pro & Virtual Purchases</h2>
+        <p>OrbitIQ offers optional premium digital goods and subscriptions processed via Google Play In-App Billing:</p>
+        <ul>
+          <li><strong>Pro Subscription:</strong> Unlocks unlimited habits, full streak protection shields, and all binaural/ambient audio generators.</li>
+          <li><strong>Virtual Items (Streak Shields, XP Surges):</strong> Virtual items are functional gameplay features inside OrbitIQ. They have zero cash value and cannot be transferred, resold, or redeemed for fiat currency.</li>
+          <li><strong>Refunds:</strong> All purchases are governed by the standard Google Play refund policy. You may request refunds directly through the Google Play Store.</li>
+        </ul>
+      </section>
+
+      <section class="section">
+        <h2 class="section-title"><span class="num">04</span> Intellectual Property</h2>
+        <p>All software code, visual design, custom vector emblems, animations, and documentation belonging to OrbitIQ are the intellectual property of <strong>SumDev Studio</strong> and protected under copyright laws.</p>
+      </section>
+
+      <section class="section">
+        <h2 class="section-title"><span class="num">05</span> Disclaimer of Warranties & Limitation of Liability</h2>
+        <p>OrbitIQ is provided on an "AS IS" and "AS AVAILABLE" basis. While engineered for high stability and offline resilience, SumDev Studio does not guarantee that the software will be uninterrupted or error-free.</p>
+        <p>In no event shall SumDev Studio be liable for any indirect, incidental, or consequential damages resulting from the use or inability to use the application.</p>
+      </section>
+
+      <section class="section">
+        <h2 class="section-title"><span class="num">06</span> Contact Information</h2>
+        <p>If you have questions regarding these terms, contact us:</p>
+        <ul>
+          <li><strong>Email:</strong> <a href="mailto:sumdevstudio.contact@gmail.com" style="color: var(--cyan);">sumdevstudio.contact@gmail.com</a></li>
+          <li><strong>Telegram:</strong> <a href="https://t.me/sumdev_studio" target="_blank" style="color: var(--cyan);">@sumdev_studio</a></li>
+        </ul>
+      </section>
+    </main>
+
+    <footer>
+      <p>© 2026 SumDev Studio • OrbitIQ Protocol. All rights reserved.</p>
+      <p style="margin-top: 6px;">
+        <a href="index.html">Privacy Policy</a> • 
+        <a href="terms.html">Terms of Service</a> • 
+        <a href="deletion.html">Data Deletion Request</a>
+      </p>
+    </footer>
+  </div>
+
+</body>
+</html>

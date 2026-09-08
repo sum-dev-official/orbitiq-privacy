@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
+  <title>Privacy Policy — OrbitIQ</title>
+  <meta name="description" content="Official Privacy Policy for OrbitIQ: Habit Streak & Focus Tracker Android App (com.sumdev.orbitiq.app). Google Play Store compliant, GDPR and CCPA transparent." />
+  <meta name="theme-color" content="#070B14" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <style>
+    :root {
+      --bg: #070B14;
+      --card-bg: rgba(15, 23, 42, 0.82);
+      --border: rgba(255, 255, 255, 0.08);
+      --text-main: #F1F5F9;
+      --text-sub: #94A3B8;
+      --cyan: #00E5FF;
+      --cyan-glow: rgba(0, 229, 255, 0.35);
+      --emerald: #00E676;
+      --emerald-glow: rgba(0, 230, 118, 0.3);
+      --violet: #8B5CF6;
+      --amber: #F59E0B;
+      --rose: #F43F5E;
+      --radius: 16px;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; background: var(--bg); }
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      background-color: var(--bg);
+      color: var(--text-main);
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+      padding-bottom: 60px;
+    }
+
+    /* Ambient background lights */
+    .glow-orb {
+      position: fixed;
+      width: 480px;
+      height: 480px;
+      border-radius: 50%;
+      filter: blur(140px);
+      opacity: 0.15;
+      pointer-events: none;
+      z-index: 0;
+    }
+    .orb-1 { top: -100px; left: -100px; background: var(--cyan); }
+    .orb-2 { top: 40%; right: -120px; background: var(--emerald); }
+    .orb-3 { bottom: -100px; left: 30%; background: var(--violet); }
+
+    .container {
+      position: relative;
+      z-index: 1;
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    /* Header Nav */
+    header {
+      padding: 24px 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid var(--border);
+      margin-bottom: 36px;
+    }
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+    }
+    .brand-icon {
+      width: 42px;
+      height: 42px;
+      border-radius: 12px;
+      background: linear-gradient(135deg, #00E5FF, #00E676);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #070B14;
+      font-weight: 900;
+      font-size: 1.25rem;
+      box-shadow: 0 0 20px var(--cyan-glow);
+    }
+    .brand-title {
+      font-family: 'Outfit', sans-serif;
+      font-size: 1.35rem;
+      font-weight: 800;
+      letter-spacing: -0.5px;
+      color: #fff;
+    }
+    .brand-tag {
+      font-size: 0.7rem;
+      color: var(--cyan);
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      font-weight: 700;
+      display: block;
+    }
+    nav {
+      display: flex;
+      gap: 10px;
+    }
+    .nav-pill {
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: var(--text-sub);
+      text-decoration: none;
+      padding: 7px 14px;
+      border-radius: 999px;
+      border: 1px solid var(--border);
+      background: rgba(255, 255, 255, 0.03);
+      transition: all 0.2s ease;
+    }
+    .nav-pill:hover, .nav-pill.active {
+      color: #fff;
+      border-color: var(--cyan);
+      background: rgba(0, 229, 255, 0.1);
+    }
+    .nav-pill.danger {
+      color: #fda4af;
+      border-color: rgba(244, 63, 94, 0.3);
+      background: rgba(244, 63, 94, 0.08);
+    }
+
+    /* Hero Section */
+    .hero {
+      text-align: center;
+      padding: 20px 0 32px;
+    }
+    .status-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 5px 14px;
+      border-radius: 999px;
+      background: rgba(0, 230, 118, 0.12);
+      border: 1px solid rgba(0, 230, 118, 0.3);
+      color: #00E676;
+      font-size: 0.78rem;
+      font-weight: 600;
+      margin-bottom: 16px;
+    }
+    .status-badge::before {
+      content: "";
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: #00E676;
+      box-shadow: 0 0 8px #00E676;
+    }
+    .hero h1 {
+      font-family: 'Outfit', sans-serif;
+      font-size: clamp(2rem, 6vw, 2.6rem);
+      font-weight: 800;
+      line-height: 1.2;
+      margin-bottom: 12px;
+      letter-spacing: -0.5px;
+    }
+    .hero h1 span {
+      background: linear-gradient(135deg, #00E5FF, #00E676);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .hero p {
+      color: var(--text-sub);
+      font-size: 1.05rem;
+      max-width: 620px;
+      margin: 0 auto;
+    }
+    .effective-date {
+      display: inline-block;
+      margin-top: 14px;
+      font-size: 0.82rem;
+      color: var(--cyan);
+      background: rgba(0, 229, 255, 0.08);
+      padding: 4px 12px;
+      border-radius: 6px;
+      border: 1px solid rgba(0, 229, 255, 0.2);
+    }
+
+    /* Highlights Banner */
+    .highlight-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 16px;
+      margin: 32px 0;
+    }
+    .highlight-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 20px;
+      backdrop-filter: blur(12px);
+      transition: transform 0.2s ease, border-color 0.2s ease;
+    }
+    .highlight-card:hover {
+      transform: translateY(-2px);
+      border-color: rgba(0, 229, 255, 0.3);
+    }
+    .card-icon {
+      font-size: 1.5rem;
+      margin-bottom: 10px;
+      display: block;
+    }
+    .highlight-card h3 {
+      font-family: 'Outfit', sans-serif;
+      font-size: 1.05rem;
+      font-weight: 700;
+      margin-bottom: 6px;
+      color: #fff;
+    }
+    .highlight-card p {
+      font-size: 0.85rem;
+      color: var(--text-sub);
+      line-height: 1.5;
+    }
+
+    /* Policy Content */
+    .policy-content {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 36px 32px;
+      backdrop-filter: blur(12px);
+    }
+    .section {
+      margin-bottom: 34px;
+    }
+    .section:last-child {
+      margin-bottom: 0;
+    }
+    .section-title {
+      font-family: 'Outfit', sans-serif;
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 14px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    }
+    .section-title .num {
+      font-size: 0.8rem;
+      color: var(--cyan);
+      background: rgba(0, 229, 255, 0.12);
+      border: 1px solid rgba(0, 229, 255, 0.25);
+      padding: 2px 8px;
+      border-radius: 6px;
+      font-family: monospace;
+    }
+    p {
+      margin-bottom: 12px;
+      color: #cbd5e1;
+      font-size: 0.95rem;
+    }
+    ul {
+      margin: 12px 0 16px 24px;
+      color: #cbd5e1;
+      font-size: 0.95rem;
+    }
+    li {
+      margin-bottom: 8px;
+    }
+    strong {
+      color: #fff;
+    }
+
+    .data-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 16px 0;
+      font-size: 0.88rem;
+    }
+    .data-table th, .data-table td {
+      padding: 12px 14px;
+      text-align: left;
+      border: 1px solid var(--border);
+    }
+    .data-table th {
+      background: rgba(255, 255, 255, 0.04);
+      color: #fff;
+      font-family: 'Outfit', sans-serif;
+      font-weight: 600;
+    }
+    .data-table td {
+      color: #cbd5e1;
+    }
+    .tag-safe {
+      display: inline-block;
+      padding: 2px 8px;
+      border-radius: 4px;
+      background: rgba(0, 230, 118, 0.12);
+      color: #00E676;
+      font-size: 0.75rem;
+      font-weight: 600;
+    }
+
+    .callout {
+      border-left: 3px solid var(--cyan);
+      background: rgba(0, 229, 255, 0.06);
+      padding: 14px 18px;
+      border-radius: 0 10px 10px 0;
+      margin: 16px 0;
+    }
+    .callout.danger {
+      border-left-color: var(--rose);
+      background: rgba(244, 63, 94, 0.06);
+    }
+
+    /* Footer */
+    footer {
+      margin-top: 48px;
+      text-align: center;
+      padding-top: 24px;
+      border-top: 1px solid var(--border);
+      color: var(--text-sub);
+      font-size: 0.85rem;
+    }
+    footer a {
+      color: var(--cyan);
+      text-decoration: none;
+    }
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 640px) {
+      header { flex-direction: column; gap: 16px; align-items: flex-start; }
+      nav { width: 100%; justify-content: flex-start; overflow-x: auto; }
+      .policy-content { padding: 24px 18px; }
+      .data-table { font-size: 0.8rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="glow-orb orb-1"></div>
+  <div class="glow-orb orb-2"></div>
+  <div class="glow-orb orb-3"></div>
+
+  <div class="container">
+    <header>
+      <a href="index.html" class="brand">
+        <div class="brand-icon">Ω</div>
+        <div>
+          <span class="brand-title">OrbitIQ</span>
+          <span class="brand-tag">SumDev Studio</span>
+        </div>
+      </a>
+      <nav>
+        <a href="index.html" class="nav-pill active">Privacy Policy</a>
+        <a href="terms.html" class="nav-pill">Terms of Service</a>
+        <a href="deletion.html" class="nav-pill danger">Delete Account</a>
+      </nav>
+    </header>
+
+    <div class="hero">
+      <div class="status-badge">Google Play Store & GDPR Compliant</div>
+      <h1>Privacy & Data <span>Sovereignty Policy</span></h1>
+      <p>Transparent, private by design, zero telemetry resale. You own your habit routines, focus data, and progression records.</p>
+      <div class="effective-date">Last Updated: September 2026 • Valid for OrbitIQ v2.0+</div>
+    </div>
+
+    <div class="highlight-grid">
+      <div class="highlight-card">
+        <span class="card-icon">🛡️</span>
+        <h3>Zero Ad Trackers</h3>
+        <p>OrbitIQ contains absolutely zero third-party advertising SDKs, data brokers, or marketing surveillance tools.</p>
+      </div>
+      <div class="highlight-card">
+        <span class="card-icon">⚡</span>
+        <h3>On-Device First Storage</h3>
+        <p>Habits, focus timers, and streak matrix calculations execute on your local SQLite/Room database.</p>
+      </div>
+      <div class="highlight-card">
+        <span class="card-icon">🔐</span>
+        <h3>Encrypted Cloud Sync</h3>
+        <p>Optional cloud accounts securely back up your progress across devices using Google Cloud Firestore with TLS 1.3.</p>
+      </div>
+    </div>
+
+    <main class="policy-content">
+
+      <!-- Section 1 -->
+      <section class="section">
+        <h2 class="section-title"><span class="num">01</span> Introduction & Overview</h2>
+        <p>This Privacy Policy applies to the <strong>OrbitIQ: Habit Streak & Focus Tracker</strong> mobile application (Package Name: <code>com.sumdev.orbitiq.app</code>), developed and operated by <strong>SumDev Studio</strong> ("we", "us", or "our").</p>
+        <p>OrbitIQ is designed as a peak personal performance protocol that empowers individuals to build positive habits, maintain unbroken daily streaks, execute deep work focus sessions, and master their cognitive focus. We believe your productivity patterns and personal routines are strictly your own property.</p>
+      </section>
+
+      <!-- Section 2 -->
+      <section class="section">
+        <h2 class="section-title"><span class="num">02</span> Information We Collect</h2>
+        <p>We believe in radical data minimization. We only collect data essential for delivering core habit tracking, streak shields, and progression features:</p>
+
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th>Data Type</th>
+              <th>Purpose</th>
+              <th>Storage Location</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Habit Routines & Logs</strong></td>
+              <td>Calculating streaks, weekly dot matrix, and XP progression.</td>
+              <td><span class="tag-safe">On-Device (Room) + Firestore</span></td>
+            </tr>
+            <tr>
+              <td><strong>Focus Sessions</strong></td>
+              <td>Deep work timer stats, soundscape preferences, and session history.</td>
+              <td><span class="tag-safe">On-Device (Room) + Firestore</span></td>
+            </tr>
+            <tr>
+              <td><strong>User Identity (UID / Email)</strong></td>
+              <td>Account sign-in (Google, Email, Anonymous) and cross-device sync.</td>
+              <td><span class="tag-safe">Google Firebase Auth</span></td>
+            </tr>
+            <tr>
+              <td><strong>Purchases & Subscriptions</strong></td>
+              <td>Unlocking Pro features, streak shields, and 2x XP multipliers.</td>
+              <td><span class="tag-safe">Google Play Billing</span></td>
+            </tr>
+            <tr>
+              <td><strong>Daily Traffic Ping (DAU)</strong></td>
+              <td>High-level active user analytics for server capacity.</td>
+              <td><span class="tag-safe">Firestore Aggregate</span></td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div class="callout">
+          <strong>No Sensitive Data Collected:</strong> OrbitIQ does not request or collect biometric data, device microphone audio, precise GPS location, contacts, or financial payment cards. All billing is processed securely by Google Play Billing.
+        </div>
+      </section>
+
+      <!-- Section 3 -->
+      <section class="section">
+        <h2 class="section-title"><span class="num">03</span> Third-Party Services & Infrastructure</h2>
+        <p>To provide high-reliability synchronization and secure account access, OrbitIQ integrates official Google Play Services and Google Firebase SDKs:</p>
+        <ul>
+          <li><strong>Google Cloud Firestore:</strong> Encrypted document database for real-time streak shield management, XP surge events, and user profiles.</li>
+          <li><strong>Google Firebase Authentication:</strong> Safe token-based sign-in supporting Google Sign-In and anonymous device identities.</li>
+          <li><strong>Google Play In-App Billing:</strong> Safe, PCI-DSS compliant payment processing for OrbitIQ Pro subscriptions and virtual streak packs.</li>
+        </ul>
+        <p>Each third-party service operates under Google's enterprise privacy framework: <a href="https://policies.google.com/privacy" target="_blank" style="color: var(--cyan);">Google Privacy Policy</a>.</p>
+      </section>
+
+      <!-- Section 4 -->
+      <section class="section">
+        <h2 class="section-title"><span class="num">04</span> Data Retention & Deletion Policy</h2>
+        <p>We respect your right to data sovereignty under GDPR (Article 17) and CCPA:</p>
+        <ul>
+          <li><strong>Local Data Wipe:</strong> You can purge all local habits, focus logs, and preferences at any time directly inside the app: <em>Settings &gt; Command Center &gt; Data &amp; Privacy &gt; Delete Account &amp; Wipe Data</em>.</li>
+          <li><strong>Cloud Data Deletion:</strong> Deleting your account immediately wipes your user document and all sub-collections from Cloud Firestore.</li>
+          <li><strong>Web Deletion Portal:</strong> In accordance with Google Play developer policies, you may also request complete data erasure via our dedicated web portal: <a href="deletion.html" style="color: var(--cyan);">OrbitIQ Account &amp; Data Deletion Page</a>.</li>
+        </ul>
+      </section>
+
+      <!-- Section 5 -->
+      <section class="section">
+        <h2 class="section-title"><span class="num">05</span> Security Architecture</h2>
+        <p>OrbitIQ enforces industry-standard technical safeguards:</p>
+        <ul>
+          <li>All network communication occurs strictly over HTTPS with modern <strong>TLS 1.3</strong> encryption.</li>
+          <li>Firestore database rules restrict document reads and writes to authorized protocol operations.</li>
+          <li>Local device databases are sandbox-protected by the Android operating system kernel.</li>
+        </ul>
+      </section>
+
+      <!-- Section 6 -->
+      <section class="section">
+        <h2 class="section-title"><span class="num">06</span> Children’s Privacy</h2>
+        <p>OrbitIQ is intended for general audiences aged 13 and above. We do not knowingly collect or solicit personal information from children under 13. If you believe that a child has provided us with personal data, please contact us immediately to have it purged.</p>
+      </section>
+
+      <!-- Section 7 -->
+      <section class="section">
+        <h2 class="section-title"><span class="num">07</span> Contact Developer & Data Protection</h2>
+        <p>For questions, privacy inquiries, or data protection assistance, you may reach the development team directly:</p>
+        <ul>
+          <li><strong>Developer / Studio:</strong> SumDev Studio</li>
+          <li><strong>Email Support:</strong> <a href="mailto:sumdevstudio.contact@gmail.com" style="color: var(--cyan);">sumdevstudio.contact@gmail.com</a></li>
+          <li><strong>Telegram Support Channel:</strong> <a href="https://t.me/sumdev_studio" target="_blank" style="color: var(--cyan);">@sumdev_studio</a></li>
+          <li><strong>Official GitHub:</strong> <a href="https://github.com/sum-dev-official" target="_blank" style="color: var(--cyan);">github.com/sum-dev-official</a></li>
+        </ul>
+      </section>
+
+    </main>
+
+    <footer>
+      <p>© 2026 SumDev Studio • OrbitIQ Protocol. All rights reserved.</p>
+      <p style="margin-top: 6px;">
+        <a href="index.html">Privacy Policy</a> • 
+        <a href="terms.html">Terms of Service</a> • 
+        <a href="deletion.html">Data Deletion Request</a>
+      </p>
+    </footer>
+  </div>
+
+</body>
+</html>
